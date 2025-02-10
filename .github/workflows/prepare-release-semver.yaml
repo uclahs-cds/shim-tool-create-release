@@ -1,8 +1,6 @@
 ---
 name: 📦 Prepare new release (overridden)
 
-run-name: Open PR for new ${{ inputs.bump_type }} release
-
 on:
   workflow_call:
     inputs:
@@ -15,6 +13,8 @@ permissions:
   actions: read
   contents: write
   pull-requests: write
+
+run-name: Open PR for new ${{ inputs.bump_type }} release
 
 jobs:
   prepare-release:
