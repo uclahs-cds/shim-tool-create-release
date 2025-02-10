@@ -1,0 +1,9 @@
+---
+on:
+  workflow_call:
+
+jobs:
+  prepare-release:
+    if: ${{ github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'automation-create-release') }}
+    uses: uclahs-cds/tool-create-release/.github/workflows/wf-finalize-release.yaml@v1.1.0
+    secrets: inherit
