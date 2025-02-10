@@ -1,5 +1,5 @@
 ---
-name: 📦 Prepare new release
+name: 📦 Prepare new release (overridden)
 
 run-name: Open PR for new ${{ inputs.bump_type }} release
 
